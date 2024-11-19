@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Add your custom styles for home cook page here */
+        .dad {
+        height: 100px;
+        width: 160px;
+        position: relative;
+        left: 630px;
+        top: 28px;
+    }
+    
+    select {
+        font-size: 30px;
+        height: 40px;
+        width: 330px;
+    }
+
+    header {
+        height: 150px;
+        width: 100%;
+        background-color: rgba(167, 236, 239, 0.987);
+    }
+
+    h2 {
+        position: relative;
+        left: 610px;
+        top: 20px;
+    }
+
+    .happy {
+        height: 250px;
+        width: 100%;
+        border-top: 2px solid rgb(175, 116, 7);
+        border-bottom: 2px solid rgb(175, 116, 7);
+        background-color: rgb(247, 236, 226);
+        display: flex;
+        gap: 180px;align-items: center;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 250px;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Image hover effect */
+    img:hover {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .done {
+        position: relative;
+        left: 3px;
+        color: red;
+    }
+
+    #re {
+        font-size: 30px;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* .person-container {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        max-width: 600px;
+    } */
+
+    /* .person-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    } */
+
+    /* .person-header img {
+        border-radius: 50%;
+        margin-right: 15px;
+    } */
+
+    /* .person-header h3 {
+        margin: 0;
+        color: #333; */
+    /* } */
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover ~ label {
+        color: #ffc700;
+    }
+
+    /* button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1abde;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    } */
+
+    button:hover {
+        background-color: #69fb73;
+        
+    }
+    button{
+        font-size: 20px;
+    }
+    .submit-rating-button {
+    font-size: 20px; 
+    width: 200px; 
+    height: 40px;
+    background-color: #dfe4de; 
+    color: rgb(11, 10, 10); 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+/* Hover effect for the "Submit Rating" button */
+ .submit-rating-button:hover {
+    background-color: #ff97e7; /* Change background color on hover */
+} 
+    /* .feedback-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .feedback-input {
+        width: 80%;
+        height: 80px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .feedback-display {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        max-height: 100px;
+        overflow-y: auto;
+        width: 80%;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    
+    
+     */
+        
+    </style>
+</head>
+<body>
+<header>
+    <section class="person-container">
+        <!-- List Baby Sitters Here -->
+        <div class="happy">
+            <div>
+                <img src="https://altiqe.com/wp-content/uploads/2020/07/company-driver.jpg" alt="Leo" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Leo</b></p>
+                <p>Experience: 1 year</p>
+                <p>Age: 27 years</p>
+                <p>Location:44 Maple Leaf Lane,Pine Hill,CO</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Leo" name="rating-Leo" value="5">
+                    <label for="star5-Leo" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Leo" name="rating-Leo" value="4">
+                    <label for="star4-Leo" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Leo" name="rating-Leo" value="3">
+                    <label for="star3-Leo" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Leo" name="rating-Leo" value="2">
+                    <label for="star2-Leo" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Leo" name="rating-Leo" value="1">
+                    <label for="star1-Leo" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Leo')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.SeMNtmO7-a25NeulS2OirwHaE7&pid=Api&P=0&h=180" alt="John" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>John</b></p>
+                <p>Experience: 3 years</p>
+                <p>Age: 22 years</p>
+                <p>Location:256 Elm Street,Pine Valley,NY-10</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-John" name="rating-John" value="5">
+                    <label for="star5-John" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-John" name="rating-John" value="4">
+                    <label for="star4-John" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-John" name="rating-John" value="3">
+                    <label for="star3-John" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-John" name="rating-John" value="2">
+                    <label for="star2-John" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-John" name="rating-John" value="1">
+                    <label for="star1-John" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://eadn-wc05-5712144.nxedge.io/wp-content/uploads/2022/04/DRIVER-SERVICES.jpg" alt="Henry" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Henry</b></p>
+                <p>Experience: 2 years</p>
+                <p>Age: 23 years</p>
+                <p>Location:908 Cedar Lane, Redwood Shore</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Henry" name="rating-Henry" value="5">
+                    <label for="star5-John" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Henry" name="rating-Henry" value="4">
+                    <label for="star-Henry" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Henry" name="rating-Henry" value="3">
+                    <label for="star3-Henry" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Henry" name="rating-Henry" value="2">
+                    <label for="star2-Henry" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Henry" name="rating-Henry" value="1">
+                    <label for="star1-Henry" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Henry')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.b8o54_7rMR7TkxYx5AjEWwHaEK&pid=Api&P=0&h=180" alt="Oliver" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Oliver</b></p>
+                <p>Experience: 2 years</p>
+                <p>Age: 21 years</p>
+                <p>Location:321 Symore Road,Aspen Height</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Oliver" name="rating-Oliver" value="5">
+                    <label for="star5-Oliver" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Oliver" name="rating-Oliver" value="4">
+                    <label for="star4-Oliver" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Oliver" name="rating-Oliver" value="3">
+                    <label for="star3-Oliver" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Oliver" name="rating-Oliver" value="2">
+                    <label for="star2-Oliver" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Oliver" name="rating-Oliver" value="1">
+                    <label for="star1-Oliver" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Oliver')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://5.imimg.com/data5/QF/GW/UG/SELLER-516843/driver-services-1000x1000.jpg" alt="Jack" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Jack</b></p>
+                <p>Experience: 1 years</p>
+                <p>Age: 25 years</p>
+                <p>Location:467 Birch Boulevard,Cedar 656</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5Jack" name="rating-Jack" value="5">
+                    <label for="star5Jack" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Jack" name="rating-Jack" value="4">
+                    <label for="star4-Jack" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Jack" name="rating-Jack" value="3">
+                    <label for="star3-Jack" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Jack" name="rating-Jack" value="2">
+                    <label for="star2-Jack" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Jack" name="rating-Jack" value="1">
+                    <label for="star1-Jack" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Jack')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <button onclick="window.location.href='maid.html'">Go back</button>
+    </section>
+    
+    </header>
+    <br><br>
+    <script>
+        function submitRating(person) {
+            const rating = document.querySelector(`input[name="rating-${person}"]:checked`);
+            if (rating) {
+                alert(`Thank you for rating ${person}! You rated: ${rating.value} stars.`);
+            } else {
+                alert(`Please select a rating for ${person} before submitting.`);
+            }
+        }
+    </script>
+    
+    
+    
+    
+    
+    </body>
+    </html>

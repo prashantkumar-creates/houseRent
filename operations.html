@@ -1,0 +1,478 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .property {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #c59999;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .buttons button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            border: none;
+            color: rgb(237, 188, 188);
+        }
+        .buttons button:hover {
+            opacity: 0.9;
+        }
+        .buttons .delete-button {
+            background-color: #e74c3c;
+        }
+        .buttons .edit-button {
+            background-color: #3498db;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        form input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        form .buttons {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Property Management</h1>
+
+    <form id="propertyForm_1">
+        <input type="text" placeholder="Title">
+        <input type="number" placeholder="Price">
+        <input type="text" placeholder="Description">
+        <input type="text" placeholder="Location">
+        <div class="buttons">
+            <button type="button" onclick="addProperty(this)">Add Property</button>
+        </div>
+    </form>
+
+    <div id="properties"></div>
+
+    <script>
+        // Function to add a property
+        function addProperty(button) {
+            const form = button.closest('form');
+            const title = form.querySelector('input[placeholder="Title"]').value;
+            const price = form.querySelector('input[placeholder="Price"]').value;
+            const description = form.querySelector('input[placeholder="Description"]').value;
+            const location = form.querySelector('input[placeholder="Location"]').value;
+
+            const propertyId = 'property_' + new Date().getTime(); // Unique ID based on timestamp
+
+            const propertyHTML = `
+                <div id="${propertyId}" class="property">
+                    <h3>${title}</h3>
+                    <p>Price: $${price}</p>
+                    <p>${description}</p>
+                    <p>Location: ${location}</p>
+                    <div class="buttons">
+                        <button class="delete-button" onclick="deleteProperty('${propertyId}')">Delete</button>
+                        <button class="edit-button" onclick="editProperty('${propertyId}')">Edit</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('properties').insertAdjacentHTML('beforeend', propertyHTML);
+
+            // Clear the form fields
+            form.reset();
+        }
+
+        // Function to delete a property
+        function deleteProperty(id) {
+            const propertyToDelete = document.getElementById(id);
+            if (propertyToDelete) {
+                propertyToDelete.remove();
+            } else {
+                console.error(`Property with ID ${id} not found for deletion.`);
+            }
+        }
+
+        // Function to edit a property
+        function editProperty(id) {
+            const property = document.getElementById(id);
+            if (!property) {
+                console.error(`Property with ID ${id} not found for editing.`);
+                return;
+            }
+
+            const title = property.querySelector('h3').innerText;
+            const price = property.querySelector('p:nth-of-type(1)').innerText.replace('Price: $', '');
+            const description = property.querySelector('p:nth-of-type(2)').innerText;
+            const location = property.querySelector('p:nth-of-type(3)').innerText.replace('Location: ', '');
+
+            // Populate the form with existing property details
+            const form = document.getElementById('propertyForm_1');
+            form.querySelector('input[placeholder="Title"]').value = title;
+            form.querySelector('input[placeholder="Price"]').value = price;
+            form.querySelector('input[placeholder="Description"]').value = description;
+            form.querySelector('input[placeholder="Location"]').value = location;
+
+            // Change form submission to handle update instead of add
+            form.querySelector('.buttons button:first-child').innerText = 'Update Property';
+            form.querySelector('.buttons button:first-child').onclick = function() {
+                updateExistingProperty(id);
+            };
+
+            // Scroll up to the form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Function to update an existing property
+        function updateExistingProperty(id) {
+            const property = document.getElementById(id);
+            if (!property) {
+                console.error(`Property with ID ${id} not found for updating.`);
+                return;
+            }
+
+            const form = document.getElementById('propertyForm_1');
+            const updatedTitle = form.querySelector('input[placeholder="Title"]').value;
+            const updatedPrice = form.querySelector('input[placeholder="Price"]').value;
+            const updatedDescription = form.querySelector('input[placeholder="Description"]').value;
+            const updatedLocation = form.querySelector('input[placeholder="Location"]').value;
+
+            // Update the property details in the DOM
+            property.querySelector('h3').innerText = updatedTitle;
+            property.querySelector('p:nth-of-type(1)').innerText = `Price: $${updatedPrice}`;
+            property.querySelector('p:nth-of-type(2)').innerText = updatedDescription;
+            property.querySelector('p:nth-of-type(3)').innerText = `Location: ${updatedLocation}`;
+
+            // Reset form and revert to add mode
+            form.reset();
+            form.querySelector('.buttons button:first-child').innerText = 'Add Property';
+            form.querySelector('.buttons button:first-child').onclick = function() {
+                addProperty(this);
+            };
+        }
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align:center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #imagePreview {
+            display: none;
+            max-width: 100%;
+            max-height: 150px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #218838;
+        }
+
+        #properties {
+            margin-top: 20px;
+        }
+
+        .property {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .property img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .property h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .property p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .property .buttons {
+            text-align: right;
+        }
+
+        .property .buttons button {
+            margin-right: 10px;
+            background-color: #007bff;
+        }
+
+        .property .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .property .delete-button {
+            background-color: #dc3545;
+        }
+
+        .property .delete-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ADD YOUR PROPERTY:</h1>
+
+    <form id="propertyForm_1">
+        <input type="text" placeholder="Title">
+        <input type="number" placeholder="Price">
+        <input type="text" placeholder="Description">
+        <input type="text" placeholder="Location">
+        <input type="file" id="imageInput" accept="image/*">
+        <img id="imagePreview" alt="Property Image Preview">
+        <div class="buttons">
+            <button type="button" onclick="addProperty(this)">Add Property</button>
+        </div>
+    </form>
+
+    <div id="properties"></div>
+
+    <script>
+        // Image preview when selecting an image file
+        document.getElementById('imageInput').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('imagePreview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                document.getElementById('imagePreview').style.display = 'none';
+            }
+        });
+
+        // Function to refresh data and display properties
+        function refreshData() {
+            fetch('/get', { 
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(response => response.json()).then(data => {
+                console.log(data);
+                data.forEach((element) => {
+                    const { title, price, description, location, imageUrl, propertyId } = element;
+                    // Create the property HTML
+                    const propertyHTML = `
+                        <div id="${propertyId}" class="property">
+                            ${imageUrl ? `<img src="${imageUrl}" alt="Property Image" onerror="this.onerror=null;this.src='whitehouse.jpg';">` : ''}
+                            <h3>${title}</h3>
+                            <p>Price: $${price}</p>
+                            <p>${description}</p>
+                            <p>Location: ${location}</p>
+                            <div class="buttons">
+                                <button class="delete-button" onclick="deleteProperty('${propertyId}')">Delete</button>
+                                <button class="edit-button" onclick="editProperty('${propertyId}')">Edit</button>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('properties').insertAdjacentHTML('beforeend', propertyHTML);
+                });
+            });
+        }
+
+        // Function to add a property
+        function addProperty(button) {
+            const form = button.closest('form');
+            const title = form.querySelector('input[placeholder="Title"]').value;
+            const price = form.querySelector('input[placeholder="Price"]').value;
+            const description = form.querySelector('input[placeholder="Description"]').value;
+            const location = form.querySelector('input[placeholder="Location"]').value;
+            const imageInput = form.querySelector('input[type="file"]');
+            const imageFile = imageInput.files[0];
+            
+            // Create a URL for the image file
+            const imageUrl = imageFile ? URL.createObjectURL(imageFile) : '';
+            
+            const propertyId = 'property_' + new Date().getTime(); // Unique ID based on timestamp
+
+            // Clear the form fields and hide the image preview
+            form.reset();
+            document.getElementById('imagePreview').style.display = 'none';
+
+            const obj = {
+                title,
+                price,
+                description,
+                location,
+                imageUrl,
+                propertyId
+            };
+            
+            // Append the obj to .json
+            fetch('/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(obj)
+            }).then(() => {
+                refreshData();
+            });
+        }
+
+        // Function to delete a property
+        function deleteProperty(id) {
+            const propertyToDelete = document.getElementById(id);
+            if (propertyToDelete) {
+                propertyToDelete.remove();
+            } else {
+                console.error(`Property with ID ${id} not found for deletion.`);
+            }
+        }
+
+        // Function to edit a property
+        function editProperty(id) {
+            const property = document.getElementById(id);
+            if (!property) {
+                console.error(`Property with ID ${id} not found for editing.`);
+                return;
+            }
+
+            const title = property.querySelector('h3').innerText;
+            const price = property.querySelector('p:nth-of-type(1)').innerText.replace('Price: $', '');
+            const description = property.querySelector('p:nth-of-type(2)').innerText;
+            const location = property.querySelector('p:nth-of-type(3)').innerText.replace('Location: ', '');
+
+            // Populate the form with existing property details
+            const form = document.getElementById('propertyForm_1');
+            form.querySelector('input[placeholder="Title"]').value = title;
+            form.querySelector('input[placeholder="Price"]').value = price;
+            form.querySelector('input[placeholder="Description"]').value = description;
+            form.querySelector('input[placeholder="Location"]').value = location;
+
+            // Set the image preview if an image exists
+            const imageUrl = property.querySelector('img') ? property.querySelector('img').src : '';
+            if (imageUrl) {
+                document.getElementById('imagePreview').src = imageUrl;
+                document.getElementById('imagePreview').style.display = 'block';
+            } else {
+                document.getElementById('imagePreview').style.display = 'none';
+            }
+
+            // Change form submission to handle update instead of add
+            form.querySelector('.buttons button:first-child').innerText = 'Update Property';
+            form.querySelector('.buttons button:first-child').onclick = function() {
+                updateExistingProperty(id);
+            };
+
+            // Scroll up to the form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Function to update an existing property
+        function updateExistingProperty(id) {
+            const property = document.getElementById(id);
+            if (!property) {
+                console.error(`Property with ID ${id} not found for updating.`);
+                return;
+            }
+
+            const form = document.getElementById('propertyForm_1');
+            const updatedTitle = form.querySelector('input[placeholder="Title"]').value;
+            const updatedPrice = form.querySelector('input[placeholder="Price"]').value;
+            const updatedDescription = form.querySelector('input[placeholder="Description"]').value;
+            const updatedLocation = form.querySelector('input[placeholder="Location"]').value;
+
+            // Update the property details in the DOM
+            property.querySelector('h3').innerText = updatedTitle;
+            property.querySelector('p:nth-of-type(1)').innerText = `Price: $${updatedPrice}`;
+            property.querySelector('p:nth-of-type(2)').innerText = updatedDescription;
+            property.querySelector('p:nth-of-type(3)').innerText = `Location: ${updatedLocation}`;
+
+            // Reset form and revert to add mode
+            form.reset();
+            document.getElementById('imagePreview').style.display = 'none';
+            form.querySelector('.buttons button:first-child').innerText = 'Add Property';
+            form.querySelector('.buttons button:first-child').onclick = function() {
+                addProperty(this);
+            };
+        }
+
+        // Initialize the page with existing properties
+        window.onload = refreshData;
+    </script>
+
+</body>
+</html>

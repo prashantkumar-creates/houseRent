@@ -1,0 +1,342 @@
+.major{
+    /* display:flex;
+    position:fixed;
+    justify-content:center;
+    justify-content:space-evenly;
+
+    /* position:relative; */
+    
+    /* height:90px;
+    width:100%; */ 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200px;
+     /* or any other background color */
+    z-index: 1000; /* ensure it's above other content */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+
+}
+
+
+body {
+    
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+#ho{
+    font-size:48px;
+    color:orange;
+    position:relative;
+    top:4px;
+}
+
+header {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-image: url("img4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    animation: background-slide 10s infinite; /* Adjust time for animation duration */
+   
+     /* Adjust the blur value as needed */
+    /* z-index: -1; error was here only... */
+}
+.dadi{
+    font-size:25px;
+    color:white;
+    text-decoration:none;
+}
+
+@keyframes background-slide {
+    0% {
+        background-image: url("home2.jpg");
+    }
+    33% {
+        background-image: url("img2.jpg");
+    }
+    66% {
+        background-image: url("img3.jpg");
+    }
+    100% {
+        background-image: url("nice.jpg");
+    }
+}
+
+
+/* h3{
+    font-size:28px;
+    color:white;
+} */
+.dadi:hover{
+    color:orange;
+    border:3px solid transparent;
+    border-radius:3px;
+
+}
+.hello{
+    position:relative;
+    top:10px;
+    height:30px;
+    width:90px;
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+    
+    background-color:orange;
+    border:2px solid transparent;
+    border-radius:7px;
+}
+.new{
+    color:white;
+    /* position:relative; */
+    text-decoration:none;
+    top:1px;
+    font-size:25px;
+}
+.good{
+    display:flex;
+    gap:7px;
+}
+#vik{
+    position:relative;
+    top:11px;
+    font-size:34px;
+    color:black;
+}
+section{
+    position:relative;
+    top:650px;
+    height:3200px;
+    width:100%;
+    background-color:rgb(244, 239, 239);
+}
+.tim{
+    position:relative;
+    left:600px;
+    font-size:40px;
+    color:black;
+    background-color:lightblue;
+    border:4px solid black
+}
+#nik{
+    position:relative;
+    left:40px;
+    height:20px;
+    width:100px;
+    border:3px solid white;
+}
+.hi{
+    height:240px;
+    width:330px;
+    background-color:rgb(236, 162, 88);
+    position:absolute;
+    top:2890px;
+    left:80px;
+}
+.qu{
+    font-size:25px;
+}
+.buy-now {
+    display: inline-block;
+    background-color:lightskyblue;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color:blue;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#unique{
+    text-align:center;
+    position:relative;
+    top:250px;
+    color:white;
+    font-size:24px;
+    
+}
+.image{
+    position:relative;
+    left:5px;
+    border:2px solid transparent;
+}
+.img img{
+    border-radius:14px;
+}
+#kiran{
+    position:relative;
+    left:400px;
+    top:250px;
+    
+    
+
+}
+.img{
+    border:6px solid white;
+}
+
+
+.goods {
+        height:60px;
+        width:740px;
+        font-size: 20px;           /* Increase font size */
+        font-weight: bold; 
+               /* Make text bold */
+        padding: 10px;             /* Add padding */
+        border: 2px solid #000;    /* Add border */
+        border-radius: 5px;        /* Rounded corners */
+        background-color: #f0f0f0; /* Background color */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+        animation: pulsate 1.5s infinite; /* Apply animation */
+    }
+    
+    .goods option {
+        font-size: 20px; /* Ensure options have the same font size */
+        font-weight: bold; /* Make options bold */
+    }
+    
+    .goods:hover {
+        background-color: #e0e0e0; /* Change background on hover */
+        transform: scale(1.05);    /* Slightly enlarge on hover */
+    }
+    
+    @keyframes pulsate {
+        0% {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+    footer{
+        position:relative;
+        top:720px;
+        height:390px;
+        width:100%;
+        background-color:rgb(3, 31, 72);
+    }
+
+.box{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    height:1700px;
+    width:1450px;
+    border:2px solid rgb(247, 244, 244);
+    gap:34px;
+}
+.img img:hover{
+    opacity:0.5;
+
+
+}
+.nani{
+    display:flex;
+    gap:100px;
+}
+.keep{
+    color:white;
+    position:relative;
+    font-size:25px;
+    top:100px;
+    left:20px;
+    height:80px;
+    width:200px;
+    
+}
+.dude{
+    display:flex;
+    gap:20px;
+}
+/* .images2{
+    
+    border-radius:10px;
+    border:10px solid white;
+    z-index:1;
+}
+.text-overlay{
+    position: relative; /* Positions it relative to the nearest positioned ancestor */
+    /* left:40px;
+    font-size:30px;
+    color:red;
+  
+  z-index: 2; 
+} */ 
+.images2 {
+    border-radius: 10px;
+    border: 10px solid white;
+    position: relative; /* Establishes this element as the reference for absolutely positioned children */
+    z-index: 1;
+    
+  }
+  .images2:hover{
+    transform:scale(1.12);
+  }
+  
+  .text-overlay {
+    position: absolute; /* Position it relative to the nearest positioned ancestor (.container) */
+    top: 2360px; /* Adjust as needed */
+    left: 45px; /* Adjust as needed */
+    font-size: 35px;
+    color:white;
+    background-color:lightgray;
+    z-index: 2; /* Ensure it appears above the image */
+  }
+  #text-overlay2{
+    position: absolute; /* Position it relative to the nearest positioned ancestor (.container) */
+    top: 2360px; /* Adjust as needed */
+    left: 399px; /* Adjust as needed */
+    font-size: 35px;
+    color:white;
+    background-color:lightgray;
+    z-index: 2; 
+
+  }
+  #text-overlay3{
+    position: absolute; /* Position it relative to the nearest positioned ancestor (.container) */
+    top: 2360px; /* Adjust as needed */
+    left: 800px; /* Adjust as needed */
+    font-size: 35px;
+    color:white;
+    background-color:lightgray;
+    z-index: 2; 
+
+  }
+  #text-overlay4{
+    position: absolute; /* Position it relative to the nearest positioned ancestor (.container) */
+    top: 2360px; /* Adjust as needed */
+    left: 1200px; /* Adjust as needed */
+    font-size: 35px;
+    color:white;
+    background-color:lightgray;
+    z-index: 2; 
+
+  }
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .yay{
+    
+    color:black;
+
+  }
+  
+  
+

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Cook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Add your custom styles for home cook page here */
+        .dad {
+        height: 100px;
+        width: 160px;
+        position: relative;
+        left: 630px;
+        top: 28px;
+    }
+    
+    select {
+        font-size: 30px;
+        height: 40px;
+        width: 330px;
+    }
+
+    header {
+        height: 150px;
+        width: 100%;
+        background-color: rgba(167, 236, 239, 0.987);
+    }
+
+    h2 {
+        position: relative;
+        left: 610px;
+        top: 20px;
+    }
+
+    .happy {
+        height: 250px;
+        width: 100%;
+        border-top: 2px solid rgb(175, 116, 7);
+        border-bottom: 2px solid rgb(175, 116, 7);
+        background-color: rgb(247, 236, 226);
+        display: flex;
+        gap: 180px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 250px;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Image hover effect */
+    img:hover {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .done {
+        position: relative;
+        left: 3px;
+        color: red;
+    }
+
+    #re {
+        font-size: 30px;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* .person-container {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        max-width: 600px;
+    } */
+
+    /* .person-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    } */
+
+    /* .person-header img {
+        border-radius: 50%;
+        margin-right: 15px;
+    } */
+
+    /* .person-header h3 {
+        margin: 0;
+        color: #333; */
+    /* } */
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover ~ label {
+        color: #ffc700;
+    }
+
+    /* button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1abde;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    } */
+
+    button:hover {
+        background-color: #69fb73;
+    }
+    button{
+        font-size: 20px;
+    }
+    .submit-rating-button {
+    font-size: 20px; 
+    width: 200px; 
+    height: 40px;
+    background-color: #dfe4de; 
+    color: rgb(11, 10, 10); 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+/* Hover effect for the "Submit Rating" button */
+ .submit-rating-button:hover {
+    background-color: #ff97e7; /* Change background color on hover */
+} 
+
+    
+    
+        
+    </style>
+</head>
+<body>
+<header>
+    <section class="person-container">
+        <!-- List Baby Sitters Here -->
+        <div class="happy">
+            <div>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.jzySSwmWbwBL_fEcSJLTTAHaE7&pid=Api&P=0&h=180" alt="Dania" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Dania</b></p>
+                <p>Experience: 3 years</p>
+                <p>Age: 29 years</p>
+                <p>Location:654 Whispering Lane,Meadowbrook</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                
+                <div class="rating">
+                    <input type="radio" id="star5-Dania" name="rating-Dania" value="5">
+                    <label for="star5-Dania" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Dania" name="rating-Dania" value="4">
+                    <label for="star4-Dania" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Dania" name="rating-Dania" value="3">
+                    <label for="star3-Dania" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Dania" name="rating-Dania" value="2">
+                    <label for="star2-Dania" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Dania" name="rating-Dania" value="1">
+                    <label for="star1-Dania" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Dania')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://bethesdahealth.org/wp-content/uploads/2017/06/iStock-578806154.jpg" alt="Aylani" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Aylani</b></p>
+                <p>Experience: 2 years</p>
+                <p>Age: 21 years</p>
+                <p>Phone number: 897589747</p>
+                <p>Location:987 Blossom Trail, Garden City, AZ</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating-Aylani" value="5">
+                    <label for="star5-Aylani" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4" name="rating-Aylani" value="4">
+                    <label for="star4-Aylani" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3" name="rating-Aylani" value="3">
+                    <label for="star3-Aylani" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2" name="rating-Aylani" value="2">
+                    <label for="star2-Aylani" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1" name="rating-Aylani" value="1">
+                    <label for="star1-Aylani" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Aylani')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.wWZU5c0N5rrZIpFMaPsl-wHaE8&pid=Api&P=0&h=180" alt="Halo" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Halo</b></p>
+                <p>Experience: 6 years</p>
+                <p>Age: 25 years</p>
+                <p>Location:111 Evergreen Terrace,Oakwood,IL</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Halo" name="rating-Halo" value="5">
+                    <label for="star5-Halo" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Halo" name="rating-Halo" value="4">
+                    <label for="star4-Halo" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Halo" name="rating-Halo" value="3">
+                    <label for="star3-Halo" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Halo" name="rating-Halo" value="2">
+                    <label for="star2" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Halo" name="rating-Halo" value="1">
+                    <label for="star1" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Halo')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://companionsforseniors.com/wp-content/uploads/2018/04/caregiverCFS2.jpg" alt="Andie" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Andie</b></p>
+                <p>Experience: 3 years</p>
+                <p>Age: 27 years</p>
+                <p>Location:222 Sunny Meadows Drive,Field 3</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Andie" name="rating-Andie" value="5">
+                    <label for="star5-Andie" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Andie" name="rating-Andie" value="4">
+                    <label for="star4-Andie" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Andie" name="rating-Andie" value="3">
+                    <label for="star3-Andie" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Andie" name="rating-Andie" value="2">
+                    <label for="star2-Andie" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Andie" name="rating-Andie" value="1">
+                    <label for="star1-Andie" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Andie')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="http://www.hugheshomecare.net/wp-content/uploads/2019/02/22222.png" alt="Ella" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Ella</b></p>
+                <p>Experience: 2 years</p>
+                <p>Age: 23 years</p>
+                <p>Location:333 Peaceful Path,Riverbend, OR</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Ella" name="rating-Ella" value="5">
+                    <label for="star5-Ella" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Ella" name="rating-Ella" value="4">
+                    <label for="star4-Ella" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Ella" name="rating-Ella" value="3">
+                    <label for="star3-Ella" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Ella" name="rating-Ella" value="2">
+                    <label for="star2-Ella" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Ella" name="rating-Ella" value="1">
+                    <label for="star1-Ella" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Ella')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <button onclick="window.location.href='maid.html'">Go back</button>
+    </section>
+    
+    </header>
+    <br><br>
+    <script>
+        function submitRating(person) {
+            const rating = document.querySelector(`input[name="rating-${person}"]:checked`);
+            if (rating) {
+                alert(`Thank you for rating ${person}! You rated: ${rating.value} stars.`);
+            } else {
+                alert(`Please select a rating for ${person} before submitting.`);
+            }
+        }
+    </script>
+    
+    
+    
+    
+    
+    </body>
+    </html>

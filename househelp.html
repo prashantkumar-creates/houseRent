@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Cook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Add your custom styles for home cook page here */
+        .dad {
+        height: 100px;
+        width: 160px;
+        position: relative;
+        left: 630px;
+        top: 28px;
+    }
+    
+    select {
+        font-size: 30px;
+        height: 40px;
+        width: 330px;
+    }
+
+    header {
+        height: 150px;
+        width: 100%;
+        background-color: rgba(167, 236, 239, 0.987);
+    }
+
+    h2 {
+        position: relative;
+        left: 610px;
+        top: 20px;
+    }
+
+    .happy {
+        height: 250px;
+        width: 100%;
+        border-top: 2px solid rgb(175, 116, 7);
+        border-bottom: 2px solid rgb(175, 116, 7);
+        background-color: rgb(247, 236, 226);
+        display: flex;
+        gap: 180px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 250px;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Image hover effect */
+    img:hover {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .done {
+        position: relative;
+        left: 3px;
+        color: red;
+    }
+
+    #re {
+        font-size: 30px;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* .person-container {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        max-width: 600px;
+    } */
+
+    /* .person-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    } */
+
+    /* .person-header img {
+        border-radius: 50%;
+        margin-right: 15px;
+    } */
+
+    /* .person-header h3 {
+        margin: 0;
+        color: #333; */
+    /* } */
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover ~ label {
+        color: #ffc700;
+    }
+    
+
+    /* button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1abde;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    } */
+
+    button:hover {
+        background-color: #69fb73;
+    }
+    button{
+        font-size: 20px;
+    }
+    .submit-rating-button {
+    font-size: 20px; 
+    width: 200px; 
+    height: 40px;
+    background-color: #dfe4de; 
+    color: rgb(11, 10, 10); 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+/* Hover effect for the "Submit Rating" button */
+ .submit-rating-button:hover {
+    background-color: #ff97e7; /* Change background color on hover */
+} 
+
+    
+    </style>
+</head>
+<body>
+<header>
+    <div class="person-container">
+        <!-- List Baby Sitters Here -->
+        <div class="happy">
+            <div>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.5bRnrHDB6raschVG0idkuwHaFq&pid=Api&P=0&h=180" alt="Alice" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Alice</b></p>
+                <p>Experience: 4years</p>
+                <p>Age: 24 years</p>
+                <p>Location:1516 Elm Street,Harmony,NY 13323</p>
+            </div>
+            <div><br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Alice" name="rating-Alice" value="5">
+                    <label for="star5-Alice" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Alice" name="rating-Alice" value="4">
+                    <label for="star4-Alice" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Alice" name="rating-Alice" value="3">
+                    <label for="star3-Alice" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Alice" name="rating-Alice" value="2">
+                    <label for="star2-Alice" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Alice" name="rating-Alice" value="1">
+                    <label for="star1-Alice" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Alice')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://i.ytimg.com/vi/iCaqf_Zy9zA/maxresdefault.jpg" alt="Anna" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Anna</b></p>
+                <p>Experience: 5 years</p>
+                <p>Age: 28 years</p>
+                <p>Location:2023 Cedar Lane,Greenfield,IL 6054</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Anna" name="rating-Anna" value="5">
+                    <label for="star5-Anna" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Anna" name="rating-Anna" value="4">
+                    <label for="star4-Anna" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Anna" name="rating-Anna" value="3">
+                    <label for="star3-Anna" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Anna" name="rating-Anna" value="2">
+                    <label for="star2-Anna" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Anna" name="rating-Anna" value="1">
+                    <label for="star1-Anna" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Anna')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://homemaidbetter.com/wp-content/uploads/2019/04/shutterstock_526418566.jpg" alt="Abigail" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Abigail</b></p>
+                <p>Experience: 6 years</p>
+                <p>Age: 30 years</p>
+                <p>Location:2345 Willow Way,Sunnyvale,AZ 8570</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Abigail" name="rating-Abigail" value="5">
+                    <label for="star5-Abigail" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Abigail" name="rating-Abigail" value="4">
+                    <label for="star4-Abigail" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Abigail" name="rating-Abigail" value="3">
+                    <label for="star3-Abigail" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Abigail" name="rating-Abigail" value="2">
+                    <label for="star2-Abigail" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Abigail" name="rating-Abigail" value="1">
+                    <label for="star1-Abigail" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Abigail')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://qualimaid.ca/wp-content/uploads/2020/10/Why-it-is-essential-to-hire-home-maid-services.jpg" alt="Scarlett" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Scarlett</b></p>
+                <p>Experience: 1 years</p>
+                <p>Age: 22 years</p>
+                <p>Location:3218 Magnolia Drive,Oceanside,WA 9</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Scarlett" name="rating-Scarlett" value="5">
+                    <label for="star5-Scarlett" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Scarlett" name="rating-Scarlett" value="4">
+                    <label for="star4-Scarlett" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Scarlett" name="rating-Scarlett" value="3">
+                    <label for="star3-Scarlett" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Scarlett" name="rating-Scarlett" value="2">
+                    <label for="star2-Scarlett" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Scarlett" name="rating-Scarlett" value="1">
+                    <label for="star1-Scarlett" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Scarlett')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.V-WHFloJQpfqXOvdHrmiRwHaFY&pid=Api&P=0&h=180" alt="Arely" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Arely</b></p>
+                <p>Experience: 3 years</p>
+                <p>Age: 24 years</p>
+                <p>Location:421 Cherry Blossom Blv,Willow Creek</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Arely" name="rating-Arely" value="5">
+                    <label for="star5Arely" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Arely" name="rating-Arely" value="4">
+                    <label for="star4-Arely" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Arely" name="rating-Arely" value="3">
+                    <label for="star3-Arely" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Arely" name="rating-Arely" value="2">
+                    <label for="star2-Arely" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Arely" name="rating-Arely" value="1">
+                    <label for="star1-Arely" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Arely')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <button onclick="window.location.href='maid.html'">Go back</button>
+    </sect>
+    
+    </header>
+    <br><br>
+    <script>
+        function submitRating(person) {
+            const rating = document.querySelector(`input[name="rating-${person}"]:checked`);
+            if (rating) {
+                alert(`Thank you for rating ${person}! You rated: ${rating.value} stars.`);
+            } else {
+                alert(`Please select a rating for ${person} before submitting.`);
+            }
+        }
+    </script>
+    
+    
+    
+    
+    
+    </body>
+    </html>

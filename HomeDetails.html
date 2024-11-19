@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .product-image {
+            flex: 1;
+            max-width: 45%;
+            padding: 10px;
+        }
+        .product-info {
+            flex: 1;
+            max-width: 45%;
+            padding: 10px;
+        }
+        .product-info h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        #price {
+            font-size: 1.5em;
+            color: #e60000;
+            margin: 20px 0;
+        }
+        .product-details {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .product-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-details li {
+            margin: 5px 0;
+        }
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 1em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About This Product</h1>
+</header>
+
+<div class="container">
+    <!-- Product Image -->
+    <div class="product-image">
+        <img src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="500px" width="400px" alt="Product Image">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+        <h1>Product Name</h1>
+        <p id="price"> </p>
+        
+        <!-- Product Details -->
+        <div class="product-details">
+            <h3>Product Details:</h3>
+            <ul>
+                <li><strong>Category:</strong> Electronics</li>
+                <li><strong>Color:</strong> Black</li>
+                <li><strong>Size:</strong> 6.5 inches</li>
+                <li><strong>Weight:</strong> 1.2 lbs</li>
+                <li><strong>Warranty:</strong> 2 years</li>
+                <li><strong>Features:</strong> 
+                    <ul>
+                        <li>High-definition display</li>
+                        <li>Long battery life</li>
+                        <li>Wireless connectivity</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a href="rozerpay.html" onclick="getpayment()" class="button">Buy Now</a>
+    </div>
+</div>
+<script>
+    window.onload = function() {
+            // Set the price
+            let price = 300000; 
+
+            // Select the element where the price should be displayed
+            const priceElement = document.getElementById('price');
+
+            // Set the price as the content of the selected element
+            priceElement.innerText = price;
+
+            getpayment 
+
+        };
+</script>
+
+</body>
+</html>

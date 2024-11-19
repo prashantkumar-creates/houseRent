@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Cook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Add your custom styles for home cook page here */
+        .dad {
+        height: 100px;
+        width: 160px;
+        position: relative;
+        left: 630px;
+        top: 28px;
+    }
+    
+    select {
+        font-size: 30px;
+        height: 40px;
+        width: 330px;
+    }
+
+    header {
+        height: 150px;
+        width: 100%;
+        background-color: rgba(167, 236, 239, 0.987);
+    }
+
+    h2 {
+        position: relative;
+        left: 610px;
+        top: 20px;
+    }
+
+    .happy {
+        height: 250px;
+        width: 100%;
+        border-top: 2px solid rgb(175, 116, 7);
+        border-bottom: 2px solid rgb(175, 116, 7);
+        background-color: rgb(247, 236, 226);
+        display: flex;
+        gap: 180px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 250px;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Image hover effect */
+    img:hover {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .done {
+        position: relative;
+        left: 3px;
+        color: red;
+    }
+
+    #re {
+        font-size: 30px;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* .person-container {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        max-width: 600px;
+    } */
+
+    /* .person-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    } */
+
+    /* .person-header img {
+        border-radius: 50%;
+        margin-right: 15px;
+    } */
+
+    /* .person-header h3 {
+        margin: 0;
+        color: #333; */
+    /* } */
+
+    .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover ~ label {
+        color: #ffc700;
+    }
+
+    /* button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1abde;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    } */
+
+    button:hover {
+        background-color: #69fb73;
+    }
+    button{
+        font-size: 20px;
+    }
+    .submit-rating-button {
+    font-size: 20px; 
+    width: 200px; 
+    height: 40px;
+    background-color: #dfe4de; 
+    color: rgb(11, 10, 10); 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+/* Hover effect for the "Submit Rating" button */
+ .submit-rating-button:hover {
+    background-color: #ff97e7; /* Change background color on hover */
+} 
+
+    
+    
+        
+    </style>
+</head>
+<body>
+<header>
+    <section class="person-container">
+        <!-- List Baby Sitters Here -->
+        <div class="happy">
+            <div>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.f0Iq0lhMYraf7lzRsSk0HQHaE7&pid=Api&P=0&h=180" alt="Amela" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Amelia</b></p>
+                <p>Experience: 3 years</p>
+                <p>Age: 27 years</p>
+                <p>Location:5348 Aspen Court,Riverbend,NJ 077</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Amelia" name="rating-Amelia" value="5">
+                    <label for="star5-Amelia" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Amelia" name="rating-Amelia" value="4">
+                    <label for="star4-Amelia" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Amelia" name="rating-Amelia" value="3">
+                    <label for="star3-Amelia" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Amelia" name="rating-Amelia" value="2">
+                    <label for="star2-Amelia" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Amelia" name="rating-Amelia" value="1">
+                    <label for="star1-Amelia" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Amelia')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://omsksalut.ru/wp-content/uploads/2020/07/B9.jpg" alt="Audrey" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Audrey</b></p>
+                <p>Experience: 5 years</p>
+                <p>Age: 29 years</p>
+                <p>Location:123 Harmony Street, Maplewood, NY</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Audrey" name="rating-Audrey" value="5">
+                    <label for="star5-Audrey" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Audrey" name="rating-Audrey" value="4">
+                    <label for="star4-Audrey" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Audrey" name="rating-Audrey" value="3">
+                    <label for="star3-Audrey" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Audrey" name="rating-Audrey" value="2">
+                    <label for="star2-Audrey" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Audrey" name="rating-Audrey" value="1">
+                    <label for="star1-Audrey" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Audrey')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://www.premiofoods.com/content/uploads/2021/06/iStock-1152001729.jpg" alt="Evelyn" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Evelyn</b></p>
+                <p>Experience: 2 years</p>
+                <p>Age: 25 years</p>
+                <p>Location:456 Serene Avenue, Brookville, TX 76</p>
+            </div>
+            <div>
+
+            <br><br>
+            <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Evelyn" name="rating-Evelyn" value="5">
+                    <label for="star5-Evelyn" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Evelyn" name="rating-Evelyn" value="4">
+                    <label for="star4-Evelyn" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Evelyn" name="rating-Evelyn" value="3">
+                    <label for="star3-Evelyn" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Evelyn" name="rating-Evelyn" value="2">
+                    <label for="star2-Evelyn" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Evelyn" name="rating-Evelyn" value="1">
+                    <label for="star1-Evelyn" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Evelyn')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.bgYt5O74-BQviUeCJRjmdgHaFj&pid=Api&P=0&h=180" alt="Isla" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Isla</b></p>
+                <p>Experience: 5 years</p>
+                <p>Age: 27 years</p>
+                <p>Location:789 Sunset Boulevard,Willow Grove,7</p>
+            </div>
+            <div>
+                <br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Isla" name="rating-Isla" value="5">
+                    <label for="star5-Isla" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Isla" name="rating-Isla" value="4">
+                    <label for="star4-Isla" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Isla" name="rating-Isla" value="3">
+                    <label for="star3-Isla" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Isla" name="rating-Isla" value="2">
+                    <label for="star2-Isla" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Isla" name="rating-Isla" value="1">
+                    <label for="star1-Isla" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Isla')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <div class="happy">
+            <div>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.Ez4uCQSYKRf_ANE1dCkQmAHaHa&pid=Api&P=0&h=180" alt="Ava" height="220px" width="100px">
+            </div>
+            <div>
+                <p><b>Ava</b></p>
+                <p>Experience: 1 years</p>
+                <p>Age: 26 years</p>
+                <p>Location:321 Tranquil Road, Cedar Valley,FL 56</p>
+            </div>
+            <div><br><br>
+                <button class="feedback-button">Write Your Feedback Here</button><br><br>
+                <!-- <p>Rating</p> -->
+                <div class="rating">
+                    <input type="radio" id="star5-Ava" name="rating-Ava" value="5">
+                    <label for="star5-Ava" title="5 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star4-Ava" name="rating-Ava" value="4">
+                    <label for="star4-Ava" title="4 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star3-Ava" name="rating-Ava" value="3">
+                    <label for="star3-Ava" title="3 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star2-Ava" name="rating-Ava" value="2">
+                    <label for="star2-Ava" title="2 stars"><i class="fa fa-star"></i></label>
+                    
+                    <input type="radio" id="star1-Ava" name="rating-Ava" value="1">
+                    <label for="star1-Ava" title="1 star"><i class="fa fa-star"></i></label>
+                </div>
+                <button class="submit-rating-button" type="button" onclick="submitRating('Ava')">Submit Rating</button>
+            </div>
+        </div><br><br>
+    
+        <button onclick="window.location.href='maid.html'">Go back</button>
+    </section>
+    
+    </header>
+    <br><br>
+    <script>
+        function submitRating(person) {
+            const rating = document.querySelector(`input[name="rating-${person}"]:checked`);
+            if (rating) {
+                alert(`Thank you for rating ${person}! You rated: ${rating.value} stars.`);
+            } else {
+                alert(`Please select a rating for ${person} before submitting.`);
+            }
+        }
+    </script>
+    </body>
+    </html>

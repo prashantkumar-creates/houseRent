@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .dad {
+        height: 100px;
+        width: 160px;
+        position: relative;
+        left: 630px;
+        top: 28px;
+    }
+    
+    select {
+        font-size: 30px;
+        height: 40px;
+        width: 330px;
+    }
+
+    header {
+        height: 150px;
+        width: 100%;
+        background-color: rgba(149, 185, 212, 0.987);
+    }
+
+    h2 {
+        position: relative;
+        left: 610px;
+        top: 20px;
+    }
+
+    .happy {
+        height: 250px;
+        width: 100%;
+        border-top: 2px solid rgb(175, 116, 7);
+        border-bottom: 2px solid rgb(175, 116, 7);
+        background-color: rgb(247, 236, 226);
+        display: flex;
+        gap: 180px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 250px;
+        width: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Image hover effect */
+    img:hover {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .done {
+        position: relative;
+        left: 3px;
+        color: red;
+    }
+
+    #re {
+        font-size: 30px;
+    }
+    /* Star Rating System */
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+
+     .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .rating input:checked ~ label,
+    .rating input:hover ~ label,
+    .rating label:hover ~ label {
+        color: #ebf220;
+    } */
+
+    
+    button:hover {
+        background-color: #e0ed22;
+    
+    }
+    button{
+        font-size: 20px;
+    }
+    
+
+    */
+
+    /* Styles for the "Write Your Feedback Here" button */
+.feedback-button {
+    font-size: 20px; /* Change font size */
+    width: 250px; /* Set width */
+    height: 50px; /* Set height */
+    background-color: #8e62b5; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+    
+
+    
+}
+
+/* Hover effect for the "Write Your Feedback Here" button */
+.feedback-button:hover {
+    background-color: #60bee9; /* Change background color on hover */
+}
+
+/* Styles for the "Submit Rating" button */
+.submit-rating-button {
+    font-size: 20px; 
+    width: 200px; 
+    height: 40px;
+    background-color: #dfe4de; 
+    color: rgb(11, 10, 10); 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+/* Hover effect for the "Submit Rating" button */
+ .submit-rating-button:hover {
+    background-color: #f86bc0; /* Change background color on hover */
+} 
+
+</style>
+<script>
+    function navigateToPage() {
+        var selectElement = document.getElementById("serviceSelect");
+        var selectedValue = selectElement.value;
+        window.location.href = selectedValue + ".html"; // Navigate to the corresponding page
+    }
+
+
+    // const emoji=document.querySelector(".emoji");
+    // const textarea=document.querySelector("textarea");
+    // const btn=document.querySelector(".btn");
+    // emoji.addEventListener("click",(e)=>{
+    //     if(e.target.className.includes("emoji")) return;
+    //     textarea.classList.toggle("textarea--active");
+    //     btn.classList.add("btn--active");
+    // })
+
+    // container.addEventListener("mouseleave",()=>{
+    //     textarea.classList.remove("textarea--active");
+    //     btn.classList.remove("btn--active");
+    // })
+</script>
+</head>
+<body>
+
+        </div>
+    </div>
+<header>
+    <h2>WHAT KIND OF SERVICE U WANT ?</h2>
+    <div class="dad">
+        <select id="serviceSelect" onchange="navigateToPage()">
+            <option value="baby-Sitter">Baby-Sitter</option>
+            <option value="HomeCook">Home Cook</option>
+            <option value="HouseHelp">House Help </option>
+            <option value="ElderlyCare">Elderly Care</option>
+            <option value="Drivers">Driver</option>
+        </select>
+    </div>
+</header><br><br>
+<!-- <button class="done">Add Yours</button>
+<i class="fa-solid fa-user" id="re"></i>
+<br><br>  -->
+
+<!-- <div class="container">
+    <div class="card__container">
+       <article class="card__article">
+          <img src="https://icon-library.com/images/maid-icon/maid-icon-28.jpg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Responsible for cleaning,tidying,dusting and making beds</span>
+             <h2 class="card__title">HouseHelp</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+
+       <article class="card__article">
+          <img src="https://www.pngkit.com/png/detail/366-3664633_chef-cooking-on-stove-comments-icon-cooking-black.png" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Responsible for preparing meals for every event</span>
+             <h2 class="card__title">HomeCook</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+
+       <article class="card__article">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.jAgHoU5-V8qK1CQxfIU6HwHaHa&pid=Api&P=0&h=180" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Help older people live independently and comfortably as well as their mental health</span>
+             <h2 class="card__title">ElderlyCare</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+
+       <article class="card__article">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.d9dIoaXqcmiTq0fXi37aVgHaHa&pid=Api&P=0&h=180" alt="image" class="card__img">
+
+        <div class="card__data">
+           <span class="card__description">Ensures the safety of their passengers and help with uloading their destinations</span>
+           <h2 class="card__title">Drivers</h2>
+           <a href="#" class="card__button">Read More</a>
+        </div>
+     </article>
+
+     <article class="card__article">
+        <img src="https://cdn0.iconfinder.com/data/icons/housewife-house-chores-housekeeping/228/household-chores-woman-wife-008-512.png" alt="image" class="card__img">
+
+        <div class="card__data">
+           <span class="card__description">Lead children in fun activities and keep their living and play areas tidy</span>
+           <h2 class="card__title">Baby-Sitter</h2>
+           <a href="#" class="card__button">Read More</a>
+        </div>
+     </article>
+    </div>
+ </div>  -->
+
+ <button class="done">Add Yours</button>
+<i class="fa-solid fa-user" id="re"></i>
+<br><br>
+
+<div class="person-container">
+    <!-- List Baby Sitters Here -->
+    <div class="happy">
+        <div>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.PhvXiumbI-D8wcVva1JpwgHaE8&pid=Api&P=0&h=180" alt="Mia" height="220px" width="100px">
+        </div>
+        <div>
+            <p><b>Mia</b></p>
+            <p>Experience: 2 years</p>
+            <p>Age: 26 years</p>
+            <p>Location: 598 Willow Way, Maple Falls, GA 30303</p>
+        </div>
+        <div>
+            <br><br>
+            <!-- <button>Write Your Feedback Here</button> -->
+             <!-- Button with feedback-button class -->
+<button class="feedback-button">Write Your Feedback Here</button><br><br>
+
+
+
+            <!-- <div class=".emoji">
+                <div>😄</div>
+                <div>😠</div>
+                <div>🙂</div>
+                <div>😍</div>
+                <div>😞</div>
+                </div><br><br>
+
+             <div> -->
+                <!-- <textarea class="textarea" cols="30" rows="3"
+                placeholder="write your opinion"></textarea>
+             </div>    -->
+
+            <!-- <p>Rating</p> -->
+            <div class="rating">
+                <input type="radio" id="star5-Mia" name="rating-Mia" value="5">
+                <label for="star5-Mia" title="5 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star4-Mia" name="rating-Mia" value="4">
+                <label for="star4-Mia" title="4 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star3-Mia" name="rating-Mia" value="3">
+                <label for="star3-Mia" title="3 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star2-Mia" name="rating-Mia" value="2">
+                <label for="star2-Mia" title="2 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star1-Mia" name="rating-Mia" value="1">
+                <label for="star1-Mia" title="1 star"><i class="fa fa-star"></i></label>
+            </div> 
+            <!-- <button type="button" onclick="submitRating('Mia')">Submit Rating</button> 
+            Button with submit-rating-button class -->
+            <button class="submit-rating-button" type="button" onclick="submitRating('Mia')">Submit Rating</button>
+             
+        </div>
+</div><br><br>
+
+    <div class="happy">
+        <div>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.S8-Ya95AVOwe8c5nMvFfhgHaE8&pid=Api&P=0&h=180" alt="Olivia" height="220px" width="100px">
+        </div>
+        <div>
+            <p><b>Olivia</b></p>
+            <p>Experience: 4 years</p>
+            <p>Age: 25years</p>
+            <p>Location:123 Maple Grove Lane, Springfield,CA 90</p>
+        </div>
+        <div><br><br>
+            <button class="feedback-button">Write Your Feedback Here</button><br><br>
+
+             <!-- <p>Rating</p> -->
+            <div class="rating">
+                <input type="radio" id="star5-Olivia" name="rating-Olivia" value="5">
+                <label for="star5-Olivia" title="5 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star4-Olivia" name="rating-Olivia" value="4">
+                <label for="star4-Olivia" title="4 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star3-Olivia" name="rating-Olivia" value="3">
+                <label for="star3-Olivia" title="3 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star2-Olivia" name="rating-Olivia" value="2">
+                <label for="star2-Olivia" title="2 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star1-Olivia" name="rating-Olivia" value="1">
+                <label for="star1-Olivia" title="1 star"><i class="fa fa-star"></i></label>
+            </div>
+            <button class="submit-rating-button" type="button" onclick="submitRating('Olivia')">Submit Rating</button>
+        </div>
+    </div><br><br>
+
+    <div class="happy">
+        <div>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.B8i7lZy1SiiJb80Ni4cRuAHaEK&pid=Api&P=0&h=180" alt="Jane" height="220px" width="100px">
+        </div>
+        <div>
+            <p><b>Jane</b></p>
+            <p>Experience: 1 years</p>
+            <p>Age: 23 years</p>
+            <p>Location:456 Pine Street, Pleasantville,TX 754012</p>
+        </div>
+        <div><br><br>
+            <button class="feedback-button">Write Your Feedback Here</button><br><br>
+            
+
+             <!-- <p>Rating</p> -->
+            <div class="rating">
+                <input type="radio" id="star5-Jane" name="rating-Jane" value="5">
+                <label for="star5-Jane" title="5 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star4-Jane" name="rating-Jane" value="4">
+                <label for="star4-Jane" title="4 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star3-Jane" name="rating-Jane" value="3">
+                <label for="star3-Jane" title="3 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star2-Jane" name="rating-Jane" value="2">
+                <label for="star2-Jane" title="2 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star1-Jane" name="rating-Jane" value="1">
+                <label for="star1-Jane" title="1 star"><i class="fa fa-star"></i></label>
+            </div> 
+            <button class="submit-rating-button" type="button" onclick="submitRating('Jane')">Submit Rating</button>
+        </div>
+    </div><br><br>
+
+    <div class="happy">
+        <div>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.9rJxuojXnzkVfMdPJ-RYSQHaE8&pid=Api&P=0&h=180" alt="Ivy" height="220px" width="100px">
+        </div>
+        <div>
+            <p><b>Ivy</b></p>
+            <p>Experience: 5 years</p>
+            <p>Age: 27 years</p>
+            <p>Location:789 Oak Avenue, Rivertown, FL 3201134</p>
+        </div>
+        <div><br><br>
+             <button class="feedback-button">Write Your Feedback Here</button><br><br>
+            
+            <!-- <p>Rating</p> -->
+            <div class="rating">
+                <input type="radio" id="star5-Ivy" name="rating-Ivy" value="5">
+                <label for="star5-Ivy" title="5 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star4-Ivy" name="rating-Ivy" value="4">
+                <label for="star4-Ivy" title="4 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star3-Ivy" name="rating-Ivy" value="3">
+                <label for="star3-Ivy" title="3 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star2-Ivy" name="rating-Ivy" value="2">
+                <label for="star2-Ivy" title="2 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star1-Ivy" name="rating-Ivy" value="1">
+                <label for="star1-Ivy" title="1 star"><i class="fa fa-star"></i></label>
+            </div>
+            <button class="submit-rating-button" type="button" onclick="submitRating('Ivy')">Submit Rating</button>
+
+        </div>
+    </div><br><br>
+
+    <div class="happy">
+        <div>
+            <img src="https://cache.magicmaman.com/data/photo/w2000_ci/4y/baby-sitter.jpg" alt="Sophia" height="220px" width="100px">
+        </div>
+        <div>
+            <p><b>Sophia</b></p>
+            <p>Experience: 3 years</p>
+            <p>Age: 29 years</p>
+            <p>Location:1012 Birch Road, Lakeside, OR 9744434</p>
+        </div>
+        <div>
+
+            <br><br>
+            <button class="feedback-button">Write Your Feedback Here</button><br><br>
+             
+             <!-- <p>Rating</p> -->
+            <div class="rating">
+                <input type="radio" id="star5-Sophia" name="rating-Sophia" value="5">
+                <label for="star5-Sophia" title="5 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star4-Sophia" name="rating-Sophia" value="4">
+                <label for="star4-Sophia" title="4 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star3-Sophia" name="rating-Sophia" value="3">
+                <label for="star3-Sophia" title="3 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star2-Sophia" name="rating-Sophia" value="2">
+                <label for="star2-Sophia" title="2 stars"><i class="fa fa-star"></i></label>
+                
+                <input type="radio" id="star1-Sophia" name="rating-Sophia" value="1">
+                <label for="star1-Sophia" title="1 star"><i class="fa fa-star"></i></label>
+            </div> 
+            <button class="submit-rating-button" type="button" onclick="submitRating('Sophia')">Submit Rating</button>
+        </div>
+    </div><br><br>
+
+    <button onclick="window.location.href='index.html'"></button>
+</section>
+
+</header>
+<br><br>
+<script>
+    function submitRating(person) {
+        const rating = document.querySelector(`input[name="rating-${person}"]:checked`);
+        if (rating) {
+            // Prepare the data to be sent
+            const data = {
+                person: person,
+                rating: rating.value
+            };
+
+            // Make a POST request to submit the rating
+            fetch('http://localhost:3000/api/ratings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert(`Thank you for rating ${person}! You rated: ${rating.value} stars.`);
+            })
+            .catch((error) => {
+                alert('Error submitting rating: ' + error.message);
+            });
+        } else {
+            alert(`Please select a rating for ${person} before submitting.`);
+        }
+    }
+</script>
+</body>
+</html>
